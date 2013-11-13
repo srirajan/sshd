@@ -32,3 +32,5 @@ service "sshd" do
     supports :restart => true
     action [ :enable, :restart ]
 end
+
+iptables_rule "port_sshd"
