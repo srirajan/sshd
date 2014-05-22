@@ -9,7 +9,7 @@
 
 template '/etc/ssh/sshd_config' do
   source 'sshd.erb'
-  mode '0644'
+  mode '0666'
   case node['platform']
   when 'redhat', 'centos', 'scientific', 'fedora', 'amazon'
     sftp_subsystem = '/usr/libexec/openssh/sftp-server'
