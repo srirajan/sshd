@@ -8,7 +8,7 @@
 #
 
 template '/etc/ssh/sshd_config' do
-  source "sshd.erb"
+  source 'sshd.erb'
   mode '0644'
   case node['platform']
   when 'redhat', 'centos', 'scientific', 'fedora', 'amazon'
